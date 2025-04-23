@@ -1,5 +1,5 @@
 # Description and Purpose
-A TCP/UDP port scanner which scans common open ports and stores the information in a SQLite backend.
+A lightweight TCP/UDP port scanner which scans common open ports and stores the information in a SQLite backend for triage
 
 # Features
 - TCP scanning (default + custom ports)
