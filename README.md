@@ -46,12 +46,14 @@ python3 scanner.py --target x.x.x.x --ports 22,80
 
 
 # Local Setup
+```bash
 git clone https://github.com/yourname/port-scanner.git
 cd port-scanner
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 make run
+```
 
 # Docker
 ```bash
