@@ -31,7 +31,7 @@ options:
 - Flask
 - requests
 - python-dotenv
-- Sqlite
+- SQLite
 
 # Installation & Quick Start
 ## Start API in background
