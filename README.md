@@ -70,6 +70,6 @@ docker-compose up --build -d
 - This will run two scanner containers, each simulating different open ports
 - One API container to receive results
 
-Results can be viewed with ```bash docker logs container_name```
+Results can be viewed with `docker logs container_name`
 
-# Alerting Plans (Future work)
+# Alerting Function (Future work)
