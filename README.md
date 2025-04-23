@@ -73,3 +73,26 @@ docker-compose up --build -d
 Results can be viewed with `docker logs container_name`
 
 # Alerting Function (Future work)
+Although alerting capabilities are not currently implemented in this project there is scope to introduce this feature.
+
+## Proposed Features
+### Rule-based Alerting
+- Define a list of critical ports that should not be open.
+- Raise an alert if any disallowed port is found in a scan.
+
+### Threshold Alerts
+- Alert if the number of open ports exceeds a defined threshold (e.g., more than 20).
+
+### Anomaly Detection
+- Track historical scans per host.
+- Alert if a new open port appears compared to the last scan.
+
+### Destination Options
+- Email notifications using SMTP (e.g., SendGrid, Mailgun).
+- Slack / Teams webhook integration for team alerts.
+- SIEM forwarding (e.g., Splunk, ELK) via syslog or HTTP.
+
+### Logging-Based Alerts
+- Integrate with Promtail + Loki to forward logs to Grafana.
+- Use Grafana Alerts for conditions on scanner logs (e.g., repeated closed port attempts)
+
