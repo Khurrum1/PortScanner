@@ -54,6 +54,7 @@ pip install -r requirements.txt
 cp .env.example .env # copy file and provide real values
 make run
 ```
+This will run the API in the background; which is followed by starting the scanner in a new terminal.
 
 # Docker
 ```bash
