@@ -47,7 +47,7 @@ python3 scanner.py --target x.x.x.x --ports 22,80
 
 # Local Setup
 ```bash
-git clone https://github.com/yourname/port-scanner.git
+git clone https://github.com/Khurrum1/PortScanner.git
 cd port-scanner
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
