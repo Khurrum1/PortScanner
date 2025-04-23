@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: port-scanner-api
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_PATH=open_ports.db
+    volumes:
+      - ./open_ports.db:/app/open_ports.db
+    restart: unless-stopped
+
+  scanner1:
+    build:
+      context: .
+      dockerfile: Dockerfile.scanner
+    container_name: port-scanner-1
+    depends_on:
+      - api
+    command: ["python3", "scanner/scanner.py", "-t", "x.x.x.x", "-p", "22,80,443"]
+
+  scanner2:
+    build:
+      context: .
+      dockerfile: Dockerfile.scanner
+    container_name: port-scanner-2
+    depends_on:
+      - api
+    command: ["python3", "scanner/scanner.py", "-t", "x.x.x.x", "-p", "8080,8443"]
